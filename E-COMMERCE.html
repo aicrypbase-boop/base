@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>E-Commerce Dashboard</title>
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #2f3542;
+    color: white;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    padding: 20px;
+    background: #1e272e;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #57606f;
+}
+
+/* Main Content */
+.main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Top Navbar */
+.navbar {
+    background: #3742fa;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin: 0;
+    color: #2f3542;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #3742fa;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 6px 12px;
+    background: #2ed573;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #20bf6b;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>E-Commerce</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Products</a>
+    <a href="#">Orders</a>
+    <a href="#">Customers</a>
+    <a href="#">Reports</a>
+    <a href="#">Logout</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+<div class="navbar">
+    Admin Dashboard
+</div>
+
+<!-- Cards -->
+<div class="cards">
+
+<div class="card">
+    <h3 id="products">0</h3>
+    <p>Total Products</p>
+</div>
+
+<div class="card">
+    <h3 id="orders">0</h3>
+    <p>Total Orders</p>
+</div>
+
+<div class="card">
+    <h3 id="customers">0</h3>
+    <p>Total Customers</p>
+</div>
+
+</div>
+
+<!-- Table -->
+<h2>Recent Orders</h2>
+
+<table>
+<tr>
+    <th>Order ID</th>
+    <th>Customer</th>
+    <th>Product</th>
+    <th>Status</th>
+    <th>Action</th>
+</tr>
+
+<tr>
+    <td>001</td>
+    <td>MUSTAPHA UMAR</td>
+    <td>Laptop</td>
+    <td>Pending</td>
+    <td>
+        <button onclick="approve()">Approve</button>
+    </td>
+</tr>
+
+<tr>
+    <td>002</td>
+    <td>YAHAY YAKUBU</td>
+    <td>Phone</td>
+    <td>Pending</td>
+    <td>
+        <button onclick="approve()">Approve</button>
+    </td>
+</tr>
+
+<tr>
+    <td>003</td>
+    <td>BLESSING JOHN</td>
+    <td>Phone</td>
+    <td>Pending</td>
+    <td>
+        <button onclick="approve()">Approve</button>
+    </td>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+
+/* Dashboard Numbers */
+document.getElementById("products").innerHTML = 25;
+document.getElementById("orders").innerHTML = 12;
+document.getElementById("customers").innerHTML = 8;
+
+/* Button Action */
+function approve() {
+    alert("Order Approved Successfully!");
+}
+
+</script>
+
+</body>
+</html>
